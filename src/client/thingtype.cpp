@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010-2024 OTClient <https://github.com/edubart/otclient>
+ * Copyright (c) 2010-2025 OTClient <https://github.com/edubart/otclient>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -796,6 +796,7 @@ void ThingType::loadTexture(const int animationPhase)
         m_opaque = !fullImage->hasTransparentPixel();
 
     textureData.source = std::make_shared<Texture>(fullImage, true, false);
+    textureData.source->setCached(true);
 }
 
 Size ThingType::getBestTextureDimension(int w, int h, const int count)
